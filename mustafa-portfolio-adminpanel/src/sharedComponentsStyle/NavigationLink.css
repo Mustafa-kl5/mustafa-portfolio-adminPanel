@@ -1,0 +1,26 @@
+.navigation-link-holder {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+.navigation-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+}
+.navigation-link:hover {
+  text-decoration: underline;
+}
+@media (min-width: 480px) {
+  .navigation-link {
+    font-size: 1.4rem;
+  }
+}
+
+/*desktop*/
+@media (min-width: 1280px) {
+  .navigation-link {
+    font-size: 1.6rem;
+  }
+}

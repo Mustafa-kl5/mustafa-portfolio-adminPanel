@@ -1,0 +1,119 @@
+.image-preview-holder {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: calc(100% - 4rem);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.preview-logo-word {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.preview-logo {
+  width: 3rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.preview-word {
+  font-size: 1.3rem;
+}
+.preview-scrollholder {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+.card-image-preview-holder {
+  min-height: 25rem;
+
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.post-image-card {
+  width: calc(25rem / 2);
+  height: calc(25rem / 2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.delete-icon {
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.preview-scrollholder::-webkit-scrollbar {
+  width: 0.2rem;
+  background: #80787880;
+  border-radius: 1rem;
+}
+
+.preview-scrollholder::-webkit-scrollbar-thumb {
+  background: rgb(26, 25, 25);
+}
+.empty-image-section-holder {
+  min-height: 25rem;
+
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-image-section-holder::-webkit-scrollbar {
+  width: 0.2rem;
+  background: #80787880;
+  border-radius: 1rem;
+}
+
+.empty-image-section-holder::-webkit-scrollbar-thumb {
+  background: rgb(26, 25, 25);
+}
+
+.empty-image-section {
+  background-image: url("../assets/empty.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 7rem;
+  height: 7rem;
+}
+.empty-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.empty-image-hint {
+  font-size: 1.2rem;
+}
+/*tablet*/
+@media (min-width: 480px) {
+  .image-preview-holder {
+    width: calc(90% - 4rem);
+  }
+}
+
+/*desktop*/
+@media (min-width: 1280px) {
+  .image-preview-holder {
+    width: calc(70% - 4rem);
+  }
+}

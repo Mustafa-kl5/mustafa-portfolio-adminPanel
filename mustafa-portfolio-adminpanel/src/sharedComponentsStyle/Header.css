@@ -1,0 +1,37 @@
+.header-holder {
+  height: 2.5rem;
+  width: calc(95% - 2rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgb(237, 240, 244);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 2px 5px 33px 7px rgba(0, 0, 0, 0.75);
+}
+.admin-word {
+  color: black;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logout-button {
+  padding: 0.2rem 1rem;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.burger-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../assets/burger.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}

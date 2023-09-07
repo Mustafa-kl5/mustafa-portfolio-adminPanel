@@ -1,0 +1,30 @@
+.text-area-field-holder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  align-self: stretch;
+}
+.text-area-field {
+  align-self: stretch;
+  height: 2rem;
+  border: 0.1rem solid black;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  transition: all 1s ease-in-out;
+  padding: 1rem;
+}
+.text-area-field:focus {
+  height: 40rem;
+}
+.text-area-field::-webkit-scrollbar {
+  width: 0.2rem;
+  background: #80787880;
+  border-radius: 1rem;
+}
+
+.text-area-field::-webkit-scrollbar-thumb {
+  background: rgb(26, 25, 25);
+}

@@ -1,0 +1,20 @@
+.input-field-holder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  align-self: stretch;
+}
+.input-field {
+  align-self: stretch;
+  height: 2rem;
+  border: 0.1rem solid black;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+.hint {
+  font-size: 1rem;
+}

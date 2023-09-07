@@ -1,0 +1,19 @@
+.feedback-card-header-section {
+  background-color: rgb(237, 240, 244);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 6px 20px 1px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback-content-name {
+  font-size: 1.3rem;
+}
+.feedback-card-content {
+  word-wrap: break-word;
+  background-color: rgb(237, 240, 244);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 6px 20px 1px rgba(0, 0, 0, 0.75);
+}
