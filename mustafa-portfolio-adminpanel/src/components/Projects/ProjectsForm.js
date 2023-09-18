@@ -16,6 +16,7 @@ export default function ProjectsForm(props) {
     projectDescription: "",
     projectLink: "",
     projectTechnology: "",
+    projectGithubRepo: "",
     projectImages: [],
   });
 
@@ -72,16 +73,6 @@ export default function ProjectsForm(props) {
           type="text"
         />
         <InputField
-          label="Project Link"
-          onChange={(e) => {
-            setProject((prev) => ({
-              ...prev,
-              projectLink: e.target.value,
-            }));
-          }}
-          type="text"
-        />
-        <InputField
           label=" Technology Used"
           onChange={(e) => {
             setProject((prev) => ({
@@ -91,6 +82,28 @@ export default function ProjectsForm(props) {
           }}
           type="text"
           hint="You must put a comma between each technology name"
+        />
+        <InputField
+          label="Project Link"
+          onChange={(e) => {
+            setProject((prev) => ({
+              ...prev,
+              projectLink: e.target.value,
+            }));
+          }}
+          type="text"
+          hint="You must Write 'None' if the project not hosted yet."
+        />
+        <InputField
+          label="Github Repo Link"
+          onChange={(e) => {
+            setProject((prev) => ({
+              ...prev,
+              projectGithubRepo: e.target.value,
+            }));
+          }}
+          type="text"
+          hint="You must Write 'None' if the project not exist on Github."
         />
         <Button innerText="Add New Project" isLoading={isLoading} />
       </Form>

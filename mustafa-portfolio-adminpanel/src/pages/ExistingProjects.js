@@ -9,6 +9,7 @@ import LoadingProgress from "../sharedComponents/LoadingProgress";
 export default function ExistingProjects() {
   const { projectID } = useParams();
   const { data, isLoading } = useGet(`/project/getProjectsById/${projectID}`);
+
   return (
     <MainLayout>
       {isLoading ? (
@@ -20,6 +21,7 @@ export default function ExistingProjects() {
             projectDescription={data?.project.description}
             projectLink={data?.project.projectLink}
             technologyUsed={data?.project.technologyUsed}
+            projectGithubRepoLink={data?.project.projectGithubRepo}
             projectId={data?.project._id}
           />
           <DeleteProject projectId={data?.project._id} />

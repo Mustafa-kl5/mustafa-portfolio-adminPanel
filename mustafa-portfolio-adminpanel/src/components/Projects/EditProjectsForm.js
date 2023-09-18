@@ -2,13 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Form from "../../UI/Form";
 import InputField from "../../sharedComponents/InputField";
 import TextAreaField from "../../sharedComponents/TextAreaField";
-import ImageUploader from "../../sharedComponents/ImageUploder";
-import ImagePreview from "../../sharedComponents/ImagePreview";
 import Button from "../../sharedComponents/Button";
-import {
-  base64ArrayToFiles,
-  base64ToBlob,
-} from "../../ImageUtil/convertImageTofile";
 import { notify, notifySuccess } from "../../Helper/Notify";
 import apiInstance from "../../Service/api";
 export default function EditProjectsForm({
@@ -16,15 +10,18 @@ export default function EditProjectsForm({
   projectDescription,
   projectLink,
   technologyUsed,
-
+  projectGithubRepoLink,
   projectId,
 }) {
   const [isLoading, setIsLoading] = useState(false);
+
   const [project, setProject] = useState({
     projectName,
     projectDescription,
     projectLink,
     technologyUsed,
+    projectGithubRepoLink,
+    projectId,
   });
   useEffect(() => {
     setProject({
@@ -32,8 +29,17 @@ export default function EditProjectsForm({
       projectDescription,
       projectLink,
       technologyUsed,
+      projectGithubRepoLink,
+      projectId,
     });
-  }, [projectName, projectDescription, projectLink, technologyUsed, projectId]);
+  }, [
+    projectName,
+    projectDescription,
+    projectLink,
+    technologyUsed,
+    projectGithubRepoLink,
+    projectId,
+  ]);
   const submitHandler = async () => {
     try {
       setIsLoading(true);
@@ -74,6 +80,18 @@ export default function EditProjectsForm({
           value={project.projectDescription}
         />
         <InputField
+          label=" Technology Used"
+          onChange={(e) =>
+            setProject((prevData) => ({
+              ...prevData,
+              technologyUsed: e.target.value,
+            }))
+          }
+          type="text"
+          hint="You must put a comma between each technology name"
+          value={project.technologyUsed}
+        />
+        <InputField
           label="Project Link"
           onChange={(e) =>
             setProject((prevData) => ({
@@ -86,18 +104,18 @@ export default function EditProjectsForm({
           hint="You must write 'None' if the project not hosted yet."
         />
         <InputField
-          label=" Technology Used"
+          label="Github Repo link"
           onChange={(e) =>
             setProject((prevData) => ({
               ...prevData,
-              technologyUsed: e.target.value,
+              projectGithubRepoLink: e.target.value,
             }))
           }
           type="text"
-          hint="You must put a comma between each technology name"
-          value={project.technologyUsed}
+          value={project.projectGithubRepoLink}
+          hint="You must Write 'None' if the project not exist on Github."
         />
-        <Button innerText="Save Change" />
+        <Button innerText="Save Change" isLoading={isLoading} />
       </Form>
     </>
   );
